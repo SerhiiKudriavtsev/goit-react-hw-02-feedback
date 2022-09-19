@@ -3,7 +3,7 @@ import Statistics from '../Statistics/Statistics';
 import Notification from '../Notification/Notification';
 import Section from '../Section/Section';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
-import './App.css';
+import css from "components/App/App.module.css";
 
 class App extends Component {
   state = {
@@ -20,8 +20,8 @@ class App extends Component {
   countPositiveFeedbackPercentage = () => {
     const total = Math.round(this.state.good /(this.countTotalFeedback())*100);
     if(total > 0) {
-    return total 
-  } else return 0
+      return total 
+    } else return 0
   }
 
   addVote = event => {
@@ -36,7 +36,7 @@ class App extends Component {
     const options = Object.keys(this.state);
     const mems = ['🤩', '🤔', '😪'];
     return (
-      <div className="feedback__container">
+      <div className={css.feedback__container}>
         <Section title="Please leave feedback">
           <FeedbackOptions 
             options={options} 

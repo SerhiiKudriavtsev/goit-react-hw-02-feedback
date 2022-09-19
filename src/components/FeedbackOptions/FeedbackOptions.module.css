@@ -1,6 +1,10 @@
-.feedback-list {
+.feedback__list {
   display: flex;
   grid-gap: 10px;
+}
+
+.feedback__item {
+  
 }
 
 .feedback__btn {
